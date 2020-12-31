@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "818531798400",
+    "firebase_url": "https://myshop-d8d91.firebaseio.com",
+    "project_id": "myshop-d8d91",
+    "storage_bucket": "myshop-d8d91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:818531798400:android:4fda84ac7dab30eb774565",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase_cubit_starter_kit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "818531798400-11iv919l4g8e5r5hcd9sd3vtsejof43u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhVnrv2dTBGELr4PcCSy-8e7AVruXWIu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "818531798400-11iv919l4g8e5r5hcd9sd3vtsejof43u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
