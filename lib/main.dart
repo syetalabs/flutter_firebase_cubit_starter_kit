@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_firebase_cubit_starter_kit/cubits/auth/auth_cubit.dart';
 import 'package:flutter_firebase_cubit_starter_kit/data/repositories/auth_repository.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/index.dart';
 
 import 'views/pages/auth/login.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginScreen(),
+      home: WalkThrough(),
     );
   }
 }
