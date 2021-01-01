@@ -46,3 +46,7 @@ class AuthError extends AuthState {
   @override
   int get hashCode => message.hashCode;
 }
+
+class Registered extends AuthState {
+  const Registered();
+}
