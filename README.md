@@ -23,11 +23,11 @@ This is a Flutter starter kit project where firebase is used as the backend and 
 <table>
      <tr>
      <td><img src="https://github.com/syetalabs/flutter_firebase_cubit_starter_kit/blob/auth/doc_images/login.jpg" width="200px;" alt=""/></td>
-     <td><img src="https://github.com/syetalabs/flutter_firebase_cubit_starter_kit/blob/auth/doc_images/register.jpg" width="200px;" alt=""/></td>
+     <td><img src="https://github.com/syetalabs/flutter_firebase_cubit_starter_kit/blob/auth/doc_images/Register.jpg" width="200px;" alt=""/></td>
      <td><img src="https://github.com/syetalabs/flutter_firebase_cubit_starter_kit/blob/auth/doc_images/home.jpg" width="200px;" alt=""/></td>
      </tr>
 </table>
 
 ### Firbase Crashlytics
 
-<img src="https://github.com/syetalabs/flutter_firebase_cubit_starter_kit/blob/auth/doc_images/crashlytics.png" width="200px;" alt=""/>
+<img src="https://github.com/syetalabs/flutter_firebase_cubit_starter_kit/blob/auth/doc_images/crashlytics.png" width="500px;" alt=""/>
