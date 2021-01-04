@@ -12,9 +12,9 @@ This is a Flutter starter kit project where firebase is used as the backend and 
 
 <table>
      <tr>
-     <td>![output](doc_images/walkthrough1.jpg)</td>
-     <td>![output](doc_images/walkthrough2.jpg)</td>
-     <td>![output](doc_images/walkthrough3.jpg)</td>
+     <td><img src="https://github.com/syetalabs/flutter_firebase_cubit_starter_kit/blob/auth/doc_images/walkthrough1.jpg" width="200px;" alt=""/></td>
+     <td><img src="https://github.com/syetalabs/flutter_firebase_cubit_starter_kit/blob/auth/doc_images/walkthrough2.jpg" width="200px;" alt=""/></td>
+     <td><img src="https://github.com/syetalabs/flutter_firebase_cubit_starter_kit/blob/auth/doc_images/walkthrough3.jpg" width="200px;" alt=""/></td>
      </tr>
 </table>
 
