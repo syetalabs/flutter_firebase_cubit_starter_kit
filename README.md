@@ -10,7 +10,15 @@ This is a Flutter starter kit project where firebase is used as the backend and 
 
 ### Waltthrough Screens
 
-![output](doc_images/walkthrough1.jpg) ![output](doc_images/walkthrough2.jpg) ![output](doc_images/walkthrough3.jpg)
+<table>
+     <tr>
+     <td>![output](doc_images/walkthrough1.jpg)</td>
+     <td>![output](doc_images/walkthrough2.jpg)</td>
+     <td>![output](doc_images/walkthrough3.jpg)</td>
+     </tr>
+</table>
+
+  
 
 ### Firebase Login and Sign up
 
