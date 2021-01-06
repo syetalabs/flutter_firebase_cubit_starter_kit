@@ -7,6 +7,7 @@ import 'login.dart';
 import '../../../cubits/auth/auth_cubit.dart';
 
 class RegisterScreen extends StatefulWidget {
+  static const routeName = '/register-screen';
   @override
   _RegisterScreenState createState() => _RegisterScreenState();
 }

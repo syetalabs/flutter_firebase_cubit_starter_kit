@@ -6,6 +6,7 @@ import 'package:flutter_firebase_cubit_starter_kit/cubits/auth/auth_cubit.dart';
 import 'package:flutter_firebase_cubit_starter_kit/data/repositories/auth_repository.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/index.dart';
 
+import 'util/custom_routes.dart';
 import 'views/pages/auth/login.dart';
 
 void main() async {
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WalkThrough(),
+      initialRoute: '/',
+      routes: customRoutes,
     );
   }
 }

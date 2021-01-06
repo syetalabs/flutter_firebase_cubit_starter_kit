@@ -6,9 +6,10 @@ import 'package:flutter_firebase_cubit_starter_kit/util/size_config.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/register.dart';
 
 import '../../../cubits/auth/auth_cubit.dart';
-import '../home/index.dart';
+import 'home/index.dart';
 
 class LoginScreen extends StatefulWidget {
+  static const routeName = '/login-screen';
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }

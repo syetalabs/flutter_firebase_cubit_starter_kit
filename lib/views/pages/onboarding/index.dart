@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_firebase_cubit_starter_kit/util/constants.dart';
 import 'package:flutter_firebase_cubit_starter_kit/util/size_config.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/login.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
 
 final _currentPageNotifier = ValueNotifier<int>(0);
@@ -232,7 +233,7 @@ class _WalkThroughState extends State<WalkThrough> {
             isLast
                 ? Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                    MaterialPageRoute(builder: (context) => Dashboard()),
                   )
                 : _pageController.jumpToPage(_currentPageNotifier.value + 1);
           },
