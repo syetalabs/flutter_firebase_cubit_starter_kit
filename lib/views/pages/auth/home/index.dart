@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/util/size_config.dart';
+
+import '../../../../util/size_config.dart';
 
 class Home extends StatelessWidget {
   static const routeName = '/loggedin-home-screen';

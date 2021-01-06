@@ -1,13 +1,12 @@
+import 'package:flutter/material.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_firebase_cubit_starter_kit/cubits/auth/auth_cubit.dart';
-import 'package:flutter_firebase_cubit_starter_kit/data/repositories/auth_repository.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/index.dart';
 
+import 'cubits/auth/auth_cubit.dart';
+import 'data/repositories/auth_repository.dart';
 import 'util/custom_routes.dart';
-import 'views/pages/auth/login.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.black,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: '/',

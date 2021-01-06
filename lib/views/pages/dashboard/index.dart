@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/user/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/widgets/feature_button.dart';
+
+import '../user/index.dart';
+import '../../widgets/feature_button.dart';
 
 class Dashboard extends StatelessWidget {
   static const routeName = '/dashboard-main-screen';

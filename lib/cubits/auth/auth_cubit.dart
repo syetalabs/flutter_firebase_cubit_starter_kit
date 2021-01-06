@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:flutter_firebase_cubit_starter_kit/data/models/user.dart';
-import 'package:flutter_firebase_cubit_starter_kit/data/repositories/auth_repository.dart';
 import 'package:meta/meta.dart';
+
+import '../../data/models/user.dart';
+import '../../data/repositories/auth_repository.dart';
 
 part 'auth_state.dart';
 

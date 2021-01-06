@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_firebase_cubit_starter_kit/util/size_config.dart';
 
 import 'login.dart';
 import '../../../cubits/auth/auth_cubit.dart';
+import '../../../util/size_config.dart';
 
 class RegisterScreen extends StatefulWidget {
   static const routeName = '/register-screen';

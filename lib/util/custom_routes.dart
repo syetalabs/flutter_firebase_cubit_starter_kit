@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/home/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/login.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/register.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/user/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/user/user_core_data.dart';
+
+import '../views/pages/auth/home/index.dart';
+import '../views/pages/auth/login.dart';
+import '../views/pages/auth/register.dart';
+import '../views/pages/dashboard/index.dart';
+import '../views/pages/onboarding/index.dart';
+import '../views/pages/user/index.dart';
+import '../views/pages/user/user_core_data.dart';
 
 var customRoutes = <String, WidgetBuilder>{
   '/': (context) => WalkThrough(),

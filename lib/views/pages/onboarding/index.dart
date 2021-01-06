@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/util/constants.dart';
-import 'package:flutter_firebase_cubit_starter_kit/util/size_config.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/login.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
+
 import 'package:page_view_indicators/circle_page_indicator.dart';
+
+import '../../../util/size_config.dart';
+import '../auth/login.dart';
+import '../dashboard/index.dart';
 
 final _currentPageNotifier = ValueNotifier<int>(0);
 final _pageController = PageController();

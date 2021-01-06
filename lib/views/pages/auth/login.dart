@@ -1,12 +1,11 @@
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_firebase_cubit_starter_kit/util/size_config.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/register.dart';
 
-import '../../../cubits/auth/auth_cubit.dart';
 import 'home/index.dart';
+import 'register.dart';
+import '../../../cubits/auth/auth_cubit.dart';
+import '../../../util/size_config.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/login-screen';
