@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/user/custom_user_data.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/user/user_account_data.dart';
 
 import 'user_core_data.dart';
@@ -23,7 +24,11 @@ class UserScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, UserAccountData.routeName);
                 }),
-            FeatureButton(heading: "Custom User Data", onPressed: () {}),
+            FeatureButton(
+                heading: "Custom User Data",
+                onPressed: () {
+                  Navigator.pushNamed(context, CustomUserData.routeName);
+                }),
           ],
         ),
       )),
