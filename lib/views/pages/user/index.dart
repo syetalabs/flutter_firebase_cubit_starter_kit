@@ -10,8 +10,12 @@ class UserScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: SingleChildScrollView(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        centerTitle: true,
+        title: Text('User'),
+      ),
+      body: SingleChildScrollView(
         child: Column(
           children: [
             FeatureButton(
@@ -31,7 +35,7 @@ class UserScreen extends StatelessWidget {
                 }),
           ],
         ),
-      )),
+      ),
     );
   }
 }

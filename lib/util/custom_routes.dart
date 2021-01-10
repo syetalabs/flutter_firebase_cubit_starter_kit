@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/data_curd/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/theme/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/user/custom_user_data.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/user/user_account_data.dart';
 
@@ -21,4 +23,6 @@ var customRoutes = <String, WidgetBuilder>{
   UserCoreData.routeName: (context) => UserCoreData(),
   UserAccountData.routeName: (context) => UserAccountData(),
   CustomUserData.routeName: (context) => CustomUserData(),
+  ThemeScreen.routeName: (context) => ThemeScreen(),
+  DataCurdScreen.routeName: (context) => DataCurdScreen(),
 };

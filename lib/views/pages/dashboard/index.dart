@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/data_curd/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/theme/index.dart';
 
 import '../user/index.dart';
 import '../../widgets/feature_button.dart';
@@ -18,8 +20,16 @@ class Dashboard extends StatelessWidget {
                   Navigator.of(context).pushNamed(UserScreen.routeName);
                 }),
             FeatureButton(heading: "UI Forms", onPressed: () {}),
-            FeatureButton(heading: "Theme", onPressed: () {}),
-            FeatureButton(heading: "Data Objects/CURD", onPressed: () {}),
+            FeatureButton(
+                heading: "Theme",
+                onPressed: () {
+                  Navigator.of(context).pushNamed(ThemeScreen.routeName);
+                }),
+            FeatureButton(
+                heading: "Data Objects/CURD",
+                onPressed: () {
+                  Navigator.of(context).pushNamed(DataCurdScreen.routeName);
+                }),
             FeatureButton(heading: "Send Email / Templates", onPressed: () {}),
             FeatureButton(heading: "Logging/Analytics/Crash", onPressed: () {}),
             FeatureButton(heading: "Firebase Cloud App", onPressed: () {}),
