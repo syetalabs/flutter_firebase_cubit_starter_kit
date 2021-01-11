@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/app_config/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/data_curd/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/firebase_cloud/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/image_upload/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/log_analy_crash/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/theme/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/user/custom_user_data.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/user/user_account_data.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/version/index.dart';
 
 import '../views/pages/auth/home/index.dart';
 import '../views/pages/auth/login.dart';
@@ -25,4 +30,9 @@ var customRoutes = <String, WidgetBuilder>{
   CustomUserData.routeName: (context) => CustomUserData(),
   ThemeScreen.routeName: (context) => ThemeScreen(),
   DataCurdScreen.routeName: (context) => DataCurdScreen(),
+  AppConfigScreen.routeName: (context) => AppConfigScreen(),
+  LogAnalyCrashScreen.routeName: (context) => LogAnalyCrashScreen(),
+  FirebaseCloudScreen.routeName: (context) => FirebaseCloudScreen(),
+  ImageUploadScreen.routeName: (context) => ImageUploadScreen(),
+  VersionScreen.routeName: (context) => VersionScreen(),
 };
