@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/forget_password.dart';
 
 import 'home/index.dart';
 import 'register.dart';
@@ -109,6 +110,12 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver {
                       builder: (context) => RegisterScreen()));
                 },
                 child: Text('Register'),
+              ),
+              FlatButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(ForgetPassword.routeName);
+                },
+                child: Text('Forget Password?'),
               ),
             ],
           ),

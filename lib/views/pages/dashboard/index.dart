@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/app_config/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/login.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/data_curd/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/firebase_cloud/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/image_upload/index.dart';
@@ -50,7 +51,11 @@ class Dashboard extends StatelessWidget {
             FeatureButton(heading: "Font Awesome", onPressed: () {}),
             FeatureButton(heading: "Version", onPressed: () {}),
             FeatureButton(heading: "First Run", onPressed: () {}),
-            FeatureButton(heading: "Login / Register", onPressed: () {}),
+            FeatureButton(
+                heading: "Login / Register",
+                onPressed: () {
+                  Navigator.of(context).pushNamed(LoginScreen.routeName);
+                }),
             FeatureButton(
                 heading: "Image Upload & Storage",
                 onPressed: () {

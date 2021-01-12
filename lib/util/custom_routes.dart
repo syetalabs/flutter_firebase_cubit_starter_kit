@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/app_config/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/forget_password.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/data_curd/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/firebase_cloud/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/image_upload/index.dart';
@@ -35,4 +36,5 @@ var customRoutes = <String, WidgetBuilder>{
   FirebaseCloudScreen.routeName: (context) => FirebaseCloudScreen(),
   ImageUploadScreen.routeName: (context) => ImageUploadScreen(),
   VersionScreen.routeName: (context) => VersionScreen(),
+  ForgetPassword.routeName: (context) => ForgetPassword(),
 };

@@ -7,6 +7,7 @@ abstract class AuthRepository {
   Future<void> login(String email, String password);
   Future<void> register(String email, String password);
   Future<void> logout();
+  Future<void> passwordResetSubmit(String email);
 }
 
 class FirebaseAuthRepository implements AuthRepository {
@@ -47,6 +48,15 @@ class FirebaseAuthRepository implements AuthRepository {
     } catch (e) {
       print(e.toString());
       throw (e);
+    }
+  }
+
+  @override
+  Future<void> passwordResetSubmit(String email) async {
+    try {
+      return _auth.sendPasswordResetEmail(email: email);
+    } catch (e) {
+      throw e;
     }
   }
 }

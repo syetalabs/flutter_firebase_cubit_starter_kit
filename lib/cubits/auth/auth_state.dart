@@ -50,3 +50,7 @@ class AuthError extends AuthState {
 class Registered extends AuthState {
   const Registered();
 }
+
+class PasswordRequestSubmitted extends AuthState {
+  const PasswordRequestSubmitted();
+}
