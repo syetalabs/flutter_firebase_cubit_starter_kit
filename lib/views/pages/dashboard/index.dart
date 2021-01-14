@@ -6,6 +6,7 @@ import 'package:flutter_firebase_cubit_starter_kit/views/pages/firebase_cloud/in
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/image_upload/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/log_analy_crash/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/theme/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/version/index.dart';
 
 import '../user/index.dart';
 import '../../widgets/feature_button.dart';
@@ -49,7 +50,11 @@ class Dashboard extends StatelessWidget {
                       .pushNamed(FirebaseCloudScreen.routeName);
                 }),
             FeatureButton(heading: "Font Awesome", onPressed: () {}),
-            FeatureButton(heading: "Version", onPressed: () {}),
+            FeatureButton(
+                heading: "Version",
+                onPressed: () {
+                  Navigator.of(context).pushNamed(VersionScreen.routeName);
+                }),
             FeatureButton(heading: "First Run", onPressed: () {}),
             FeatureButton(
                 heading: "Login / Register",
