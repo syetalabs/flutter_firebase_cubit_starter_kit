@@ -5,6 +5,7 @@ import 'package:flutter_firebase_cubit_starter_kit/views/pages/data_curd/index.d
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/firebase_cloud/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/image_upload/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/log_analy_crash/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/theme/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/version/index.dart';
 
@@ -20,6 +21,12 @@ class Dashboard extends StatelessWidget {
         child: SingleChildScrollView(
             child: Column(
           children: [
+            FeatureButton(
+                heading: "1-Onboarding",
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamed(OnboardingMainScreen.routeName);
+                }),
             FeatureButton(
                 heading: "User",
                 onPressed: () {
