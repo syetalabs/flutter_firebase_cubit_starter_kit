@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_a.dart';
 import '../../widgets/feature_button.dart';
+import 'kit_b.dart';
 
 class OnboardingMainScreen extends StatelessWidget {
   static const routeName = '/onboarding-main-screen';
@@ -23,7 +24,7 @@ class OnboardingMainScreen extends StatelessWidget {
             FeatureButton(
                 heading: "OnBoard Slides Kit-B (onboardme)",
                 onPressed: () {
-                  //  Navigator.pushNamed(context, UserAccountData.routeName);
+                  Navigator.pushNamed(context, OnboardKitB.routeName);
                 }),
           ],
         ),
