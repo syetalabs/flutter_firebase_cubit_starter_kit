@@ -28,6 +28,11 @@ class Dashboard extends StatelessWidget {
                       .pushNamed(OnboardingMainScreen.routeName);
                 }),
             FeatureButton(
+                heading: "2 Sign up/Sign in",
+                onPressed: () {
+                  Navigator.of(context).pushNamed(LoginScreen.routeName);
+                }),
+            FeatureButton(
                 heading: "User",
                 onPressed: () {
                   Navigator.of(context).pushNamed(UserScreen.routeName);
@@ -63,11 +68,6 @@ class Dashboard extends StatelessWidget {
                   Navigator.of(context).pushNamed(VersionScreen.routeName);
                 }),
             FeatureButton(heading: "First Run", onPressed: () {}),
-            FeatureButton(
-                heading: "Login / Register",
-                onPressed: () {
-                  Navigator.of(context).pushNamed(LoginScreen.routeName);
-                }),
             FeatureButton(
                 heading: "Image Upload & Storage",
                 onPressed: () {

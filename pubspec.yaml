@@ -38,6 +38,7 @@ dependencies:
   card_settings: ^1.15.0
   package_info: ^0.4.3+2
   onboardme: ^1.2.0
+  flutter_login: ^1.0.14
 
 dev_dependencies:
   flutter_test:

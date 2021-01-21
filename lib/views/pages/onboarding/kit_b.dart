@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
 import 'package:onboardme/onboardme.dart';
 
 class OnboardKitB extends StatelessWidget {
@@ -7,7 +8,7 @@ class OnboardKitB extends StatelessWidget {
   Widget build(BuildContext context) {
     return OnboardingMe(
       /// Number of Pages for the screens
-      numOfPage: 5,
+      numOfPage: 3,
 
       /// No of colors you want for your screen
       noOfBackgroundColor: 4,
@@ -46,7 +47,7 @@ class OnboardKitB extends StatelessWidget {
       isPageIndicatorCircle: true,
 
       /// Home Screen Route that lands after on-boarding
-      homeRoute: '/Home/',
+      homeRoute: Dashboard.routeName,
     );
   }
 }
