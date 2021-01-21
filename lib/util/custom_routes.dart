@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/auth_entry_screen.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/flutter_login.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/kit_a.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_a.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_b.dart';
@@ -46,4 +49,7 @@ var customRoutes = <String, WidgetBuilder>{
   OnboardKitA.routeName: (context) => OnboardKitA(),
   OnboardKitB.routeName: (context) => OnboardKitB(),
   FlutterLoginScreen.routeName: (context) => FlutterLoginScreen(),
+  AuthEntryScreen.routeName: (context) => AuthEntryScreen(),
+  AuthKitA.routeName: (context) => AuthKitA(),
+  AuthMainScreen.routeName: (context) => AuthMainScreen(),
 };

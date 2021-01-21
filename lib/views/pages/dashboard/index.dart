@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/app_config/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/login.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/data_curd/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/firebase_cloud/index.dart';
@@ -30,7 +31,7 @@ class Dashboard extends StatelessWidget {
             FeatureButton(
                 heading: "2 Sign up/Sign in",
                 onPressed: () {
-                  Navigator.of(context).pushNamed(LoginScreen.routeName);
+                  Navigator.of(context).pushNamed(AuthMainScreen.routeName);
                 }),
             FeatureButton(
                 heading: "User",

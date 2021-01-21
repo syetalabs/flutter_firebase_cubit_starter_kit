@@ -74,7 +74,7 @@ class _RegisterScreenState extends State<RegisterScreen>
                 }
               }),
               Text(
-                'Register',
+                'Sigun Up',
                 style: TextStyle(
                     color: Colors.black,
                     fontFamily: 'HelveticaNeue',
@@ -113,6 +113,32 @@ class _RegisterScreenState extends State<RegisterScreen>
                       MaterialPageRoute(builder: (context) => LoginScreen()));
                 },
                 child: Text('Login'),
+              ),
+              MaterialButton(
+                onPressed: () {},
+                child: Text(
+                  'Signup with Facebook',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                color: Colors.black,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(4))),
+              ),
+              MaterialButton(
+                onPressed: () {},
+                child: Text(
+                  'Signup with Google',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                color: Colors.black,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(4))),
               ),
             ],
           ),

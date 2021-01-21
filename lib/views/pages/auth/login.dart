@@ -36,6 +36,7 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       body: Center(
         child: Padding(
@@ -116,6 +117,32 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver {
                   Navigator.of(context).pushNamed(ForgetPassword.routeName);
                 },
                 child: Text('Forget Password?'),
+              ),
+              MaterialButton(
+                onPressed: () {},
+                child: Text(
+                  'Login with Facebook',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                color: Colors.black,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(4))),
+              ),
+              MaterialButton(
+                onPressed: () {},
+                child: Text(
+                  'Login with Google',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                color: Colors.black,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(4))),
               ),
             ],
           ),
