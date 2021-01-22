@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'cubits/auth/auth_cubit.dart';
 import 'data/repositories/auth_repository.dart';
 import 'util/custom_routes.dart';
-
+//This is the basic branch
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
