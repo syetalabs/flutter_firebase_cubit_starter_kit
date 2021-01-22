@@ -39,6 +39,7 @@ dependencies:
   package_info: ^0.4.3+2
   onboardme: ^1.2.0
   flutter_login: ^1.0.14
+  google_sign_in: ^4.5.9
 
 dev_dependencies:
   flutter_test:

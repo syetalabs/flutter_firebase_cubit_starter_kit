@@ -34,6 +34,11 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver {
     authCubit.login(email, password);
   }
 
+  void loginWithGoogle() {
+    final authCubit = BlocProvider.of<AuthCubit>(context);
+    authCubit.loginWithGoogle();
+  }
+
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -118,21 +123,21 @@ class _LoginScreenState extends State<LoginScreen> with WidgetsBindingObserver {
                 },
                 child: Text('Forget Password?'),
               ),
+              // MaterialButton(
+              //   onPressed: () {},
+              //   child: Text(
+              //     'Login with Facebook',
+              //     style: TextStyle(
+              //       color: Colors.white,
+              //     ),
+              //     textAlign: TextAlign.center,
+              //   ),
+              //   color: Colors.black,
+              //   shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.all(Radius.circular(4))),
+              // ),
               MaterialButton(
-                onPressed: () {},
-                child: Text(
-                  'Login with Facebook',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                color: Colors.black,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(4))),
-              ),
-              MaterialButton(
-                onPressed: () {},
+                onPressed: loginWithGoogle,
                 child: Text(
                   'Login with Google',
                   style: TextStyle(

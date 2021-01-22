@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
+import 'package:google_sign_in/google_sign_in.dart';
 
 import '../models/user.dart';
 
@@ -8,6 +9,7 @@ abstract class AuthRepository {
   Future<void> register(String email, String password);
   Future<void> logout();
   Future<void> passwordResetSubmit(String email);
+  Future<void> signInWithGoogle();
 }
 
 class FirebaseAuthRepository implements AuthRepository {
@@ -57,6 +59,31 @@ class FirebaseAuthRepository implements AuthRepository {
       return _auth.sendPasswordResetEmail(email: email);
     } catch (e) {
       throw e;
+    }
+  }
+
+  Future<void> signInWithGoogle() async {
+    try {
+      // Trigger the authentication flow
+      final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
+
+      // Obtain the auth details from the request
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
+
+      // Create a new credential
+      final firebaseAuth.GoogleAuthCredential credential =
+          firebaseAuth.GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+
+      // Once signed in, return the UserCredential
+      firebaseAuth.UserCredential result =
+          await _auth.signInWithCredential(credential);
+      return User(uid: result.user.uid);
+    } catch (e) {
+      throw (e);
     }
   }
 }
