@@ -11,15 +11,10 @@ class OnboardKitB extends StatelessWidget {
       numOfPage: 3,
 
       /// No of colors you want for your screen
-      noOfBackgroundColor: 4,
+      noOfBackgroundColor: 2,
 
       /// List of background colors => In descending order
-      bgColor: [
-        Color(0xFF3594DD),
-        Color(0xFF4563DB),
-        Color(0xFF5036D5),
-        Color(0xFF5B16D0),
-      ],
+      bgColor: [Colors.white, Colors.white],
 
       /// List of  Call-to-action action
       ctaText: ['Skip', 'Get Started'],
@@ -48,6 +43,7 @@ class OnboardKitB extends StatelessWidget {
 
       /// Home Screen Route that lands after on-boarding
       homeRoute: Dashboard.routeName,
+      txtColor: Colors.black,
     );
   }
 }

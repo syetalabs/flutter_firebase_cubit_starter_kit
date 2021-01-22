@@ -37,9 +37,12 @@ dependencies:
   circular_profile_avatar: ^1.0.8
   card_settings: ^1.15.0
   package_info: ^0.4.3+2
-  onboardme: ^1.2.0
+  onboardme:
+    git:
+      url: https://github.com/dnadanushka/On-Board-Me
   flutter_login: ^1.0.14
   google_sign_in: ^4.5.9
+  custom_splash: ^0.0.2
 
 dev_dependencies:
   flutter_test:
@@ -61,6 +64,7 @@ flutter:
     - assets/av2.png
     - assets/av3.png
     - assets/home.png
+    - assets/sk.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

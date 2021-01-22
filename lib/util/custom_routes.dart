@@ -28,7 +28,6 @@ import '../views/pages/user/user_core_data.dart';
 import '../views/pages/user/user_account_data.dart';
 
 var customRoutes = <String, WidgetBuilder>{
-  '/': (context) => FirstPage(),
   Dashboard.routeName: (context) => Dashboard(),
   UserScreen.routeName: (context) => UserScreen(),
   LoginScreen.routeName: (context) => LoginScreen(),
