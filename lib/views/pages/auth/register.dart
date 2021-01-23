@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
 
 import 'login.dart';
 import '../../../cubits/auth/auth_cubit.dart';
@@ -62,14 +63,14 @@ class _RegisterScreenState extends State<RegisterScreen>
                       content: Text('An Error Occured'),
                     ),
                   );
-                } else if (state is Registered) {
+                } else if (state is Authenticated) {
                   Scaffold.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('Register successful please log in '),
+                      content: Text('Register successful please continue'),
                     ),
                   );
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                      MaterialPageRoute(builder: (context) => Dashboard()));
                 } else {
                   Scaffold.of(context).showSnackBar(
                     SnackBar(

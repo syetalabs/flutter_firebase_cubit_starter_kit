@@ -47,10 +47,6 @@ class AuthError extends AuthState {
   int get hashCode => message.hashCode;
 }
 
-class Registered extends AuthState {
-  const Registered();
-}
-
 class PasswordRequestSubmitted extends AuthState {
   const PasswordRequestSubmitted();
 }
