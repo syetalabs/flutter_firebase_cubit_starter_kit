@@ -33,10 +33,10 @@ class _RegisterScreenState extends State<RegisterScreen>
     authCubit.register(email, password);
   }
 
-  void registerWithGoogle() {
-    final authCubit = BlocProvider.of<AuthCubit>(context);
-    authCubit.loginWithGoogle();
-  }
+  // void registerWithGoogle() {
+  //   final authCubit = BlocProvider.of<AuthCubit>(context);
+  //   authCubit.loginWithGoogle();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -133,19 +133,19 @@ class _RegisterScreenState extends State<RegisterScreen>
               //   shape: RoundedRectangleBorder(
               //       borderRadius: BorderRadius.all(Radius.circular(4))),
               // ),
-              MaterialButton(
-                onPressed: registerWithGoogle,
-                child: Text(
-                  'Signup with Google',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                color: Colors.black,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(4))),
-              ),
+              // MaterialButton(
+              //   onPressed: registerWithGoogle,
+              //   child: Text(
+              //     'Signup with Google',
+              //     style: TextStyle(
+              //       color: Colors.white,
+              //     ),
+              //     textAlign: TextAlign.center,
+              //   ),
+              //   color: Colors.black,
+              //   shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.all(Radius.circular(4))),
+              // ),
             ],
           ),
         ),
