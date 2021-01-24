@@ -70,4 +70,18 @@ class AuthCubit extends Cubit<AuthState> {
       emit(AuthError(e.toString()));
     }
   }
+
+  void isLoggedIn() {
+    try {
+      emit(AuthLoading());
+      if (_authRepository.currentUser() != null) {
+        User currentUser = _authRepository.currentUser();
+        emit(Authenticated(currentUser));
+      } else {
+        emit(NotAuthenticated());
+      }
+    } catch (e) {
+      emit(AuthError(e.toString()));
+    }
+  }
 }

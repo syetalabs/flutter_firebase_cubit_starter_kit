@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
 
 import 'cubits/auth/auth_cubit.dart';
 import 'data/repositories/auth_repository.dart';
@@ -24,18 +25,22 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  Function duringSplash = () {
-    print('Something background process');
-    int a = 123 + 23;
-    print(a);
+  // Function duringSplash = (BuildContext context) {
+  //   print('Inside during splash ');
+  //   print('Something background process');
+  //   final authCubit = BlocProvider.of<AuthCubit>(context);
+  //   authCubit.isLoggedIn();
 
-    if (a > 100)
-      return 1;
-    else
-      return 2;
-  };
+  //   if (authCubit.state is Authenticated) {
+  //     print('Authenticated');
+  //     return 1;
+  //   } else {
+  //     return 2;
+  //   }
+  // };
 
-  Map<int, Widget> op = {1: OnboardKitB(), 2: OnboardKitB()};
+  final Map<int, Widget> op = {1: Dashboard(), 2: OnboardKitB()};
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -44,6 +49,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      routes: customRoutes,
       home: CustomSplash(
         imagePath: 'assets/sk.png',
         backGroundColor: Colors.white,
@@ -51,12 +57,26 @@ class MyApp extends StatelessWidget {
         animationEffect: 'zoom-in',
         logoSize: 200,
         home: OnboardKitB(),
-        customFunction: duringSplash,
+        // customFunction: () {
+        //   print('Inside Fucntion');
+        //   duringSplash(context);
+        // },
+        customFunction: () {
+          print('Inside during splash ');
+          final authCubit = BlocProvider.of<AuthCubit>(context);
+          authCubit.isLoggedIn();
+
+          if (authCubit.state is Authenticated) {
+            print('Authenticated');
+            return 1;
+          } else {
+            return 2;
+          }
+        },
         duration: 2500,
-        type: CustomSplashType.StaticDuration,
+        type: CustomSplashType.BackgroundProcess,
         outputAndHome: op,
       ),
-      routes: customRoutes,
     );
   }
 }

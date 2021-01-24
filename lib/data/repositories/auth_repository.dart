@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/user.dart';
 
@@ -26,6 +27,10 @@ class FirebaseAuthRepository implements AuthRepository {
     try {
       firebaseAuth.UserCredential result = await _auth
           .signInWithEmailAndPassword(email: email, password: password);
+      final prefs = await SharedPreferences.getInstance();
+      var key = 'uid';
+      var val = result.user.uid;
+      prefs.setString(key, val);
       return User(uid: result.user.uid);
     } catch (e) {
       throw (e);
@@ -37,6 +42,10 @@ class FirebaseAuthRepository implements AuthRepository {
     try {
       firebaseAuth.UserCredential result = await _auth
           .createUserWithEmailAndPassword(email: email, password: password);
+      final prefs = await SharedPreferences.getInstance();
+      var key = 'uid';
+      var val = result.user.uid;
+      prefs.setString(key, val);
       return User(uid: result.user.uid);
     } catch (e) {
       throw (e);
@@ -81,6 +90,10 @@ class FirebaseAuthRepository implements AuthRepository {
       // Once signed in, return the UserCredential
       firebaseAuth.UserCredential result =
           await _auth.signInWithCredential(credential);
+      final prefs = await SharedPreferences.getInstance();
+      var key = 'uid';
+      var val = result.user.uid;
+      prefs.setString(key, val);
       return User(uid: result.user.uid);
     } catch (e) {
       throw (e);

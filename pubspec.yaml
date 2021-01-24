@@ -43,6 +43,7 @@ dependencies:
   flutter_login: ^1.0.14
   google_sign_in: ^4.5.9
   custom_splash: ^0.0.2
+  shared_preferences: ^0.5.12+4
 
 dev_dependencies:
   flutter_test:

@@ -22,7 +22,7 @@ class Dashboard extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
-        title: Text('Data CURD'),
+        title: Text('StartKit'),
       ),
       drawer: MainDrawer(),
       body: Center(
