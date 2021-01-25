@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -11,10 +12,14 @@ abstract class AuthRepository {
   Future<void> logout();
   Future<void> passwordResetSubmit(String email);
   Future<void> signInWithGoogle();
+  Future<bool> isFirstRun();
+  Future<void> updatePersonalData(
+      String firstname, String lastName, String birthday);
 }
 
 class FirebaseAuthRepository implements AuthRepository {
   final firebaseAuth.FirebaseAuth _auth = firebaseAuth.FirebaseAuth.instance;
+  CollectionReference users = FirebaseFirestore.instance.collection('users');
 
   //getting the current authenticated user in the firebase auth
   User currentUser() {
@@ -71,6 +76,7 @@ class FirebaseAuthRepository implements AuthRepository {
     }
   }
 
+  //Google Authentication
   Future<void> signInWithGoogle() async {
     try {
       // Trigger the authentication flow
@@ -95,6 +101,25 @@ class FirebaseAuthRepository implements AuthRepository {
       var val = result.user.uid;
       prefs.setString(key, val);
       return User(uid: result.user.uid);
+    } catch (e) {
+      throw (e);
+    }
+  }
+
+  Future<bool> isFirstRun() async {
+    DocumentSnapshot userdoc = await users.doc(currentUser().uid).get();
+    if (userdoc.exists) {
+      return false;
+    }
+    return true;
+  }
+
+  @override
+  Future<void> updatePersonalData(
+      String firstname, String lastName, String birthday) async {
+    try {
+      await users.doc(currentUser().uid).set(
+          {'firstName': firstname, 'lastName': lastName, 'birthday': birthday});
     } catch (e) {
       throw (e);
     }

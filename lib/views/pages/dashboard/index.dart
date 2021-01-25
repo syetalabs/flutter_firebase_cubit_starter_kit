@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_firebase_cubit_starter_kit/cubits/auth/auth_cubit.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/app_config/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/index.dart';
 
@@ -14,8 +16,34 @@ import 'package:flutter_firebase_cubit_starter_kit/views/widgets/mian_drawer.dar
 import '../user/index.dart';
 import '../../widgets/feature_button.dart';
 
-class Dashboard extends StatelessWidget {
+class Dashboard extends StatefulWidget {
   static const routeName = '/dashboard-main-screen';
+
+  @override
+  _DashboardState createState() => _DashboardState();
+}
+
+class _DashboardState extends State<Dashboard> {
+  TextEditingController _firstNameController;
+  TextEditingController _lastNameController;
+  TextEditingController _birthdayController;
+
+  @override
+  void initState() {
+    _firstNameController = TextEditingController();
+    _lastNameController = TextEditingController();
+    _birthdayController = TextEditingController();
+    final authCubit = BlocProvider.of<AuthCubit>(context);
+    authCubit.isFirstRun();
+    super.initState();
+  }
+
+  void updatePersonlData() {
+    final authCubit = BlocProvider.of<AuthCubit>(context);
+    authCubit.updatePersonalData(_firstNameController.text,
+        _lastNameController.text, _birthdayController.text);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,63 +57,94 @@ class Dashboard extends StatelessWidget {
         child: SingleChildScrollView(
             child: Column(
           children: [
-            // FeatureButton(
-            //     heading: "1-Onboarding",
-            //     onPressed: () {
-            //       Navigator.of(context)
-            //           .pushNamed(OnboardingMainScreen.routeName);
-            //     }),
-            // FeatureButton(
-            //     heading: "2 Sign up/Sign in",
-            //     onPressed: () {
-            //       Navigator.of(context).pushNamed(AuthMainScreen.routeName);
-            //     }),
-            // FeatureButton(
-            //     heading: "User",
-            //     onPressed: () {
-            //       Navigator.of(context).pushNamed(UserScreen.routeName);
-            //     }),
-            // FeatureButton(heading: "UI Forms", onPressed: () {}),
-            // FeatureButton(
-            //     heading: "Theme",
-            //     onPressed: () {
-            //       Navigator.of(context).pushNamed(ThemeScreen.routeName);
-            //     }),
-            // FeatureButton(
-            //     heading: "Data Objects/CURD",
-            //     onPressed: () {
-            //       Navigator.of(context).pushNamed(DataCurdScreen.routeName);
-            //     }),
-            // FeatureButton(heading: "Send Email / Templates", onPressed: () {}),
-            // FeatureButton(
-            //     heading: "Logging/Analytics/Crash",
-            //     onPressed: () {
-            //       Navigator.of(context)
-            //           .pushNamed(LogAnalyCrashScreen.routeName);
-            //     }),
-            // FeatureButton(
-            //     heading: "Firebase Cloud App",
-            //     onPressed: () {
-            //       Navigator.of(context)
-            //           .pushNamed(FirebaseCloudScreen.routeName);
-            //     }),
-            // FeatureButton(heading: "Font Awesome", onPressed: () {}),
-            // FeatureButton(
-            //     heading: "Version",
-            //     onPressed: () {
-            //       Navigator.of(context).pushNamed(VersionScreen.routeName);
-            //     }),
-            // FeatureButton(heading: "First Run", onPressed: () {}),
-            // FeatureButton(
-            //     heading: "Image Upload & Storage",
-            //     onPressed: () {
-            //       Navigator.of(context).pushNamed(ImageUploadScreen.routeName);
-            //     }),
-            // FeatureButton(
-            //     heading: "App Config Info",
-            //     onPressed: () {
-            //       Navigator.of(context).pushNamed(AppConfigScreen.routeName);
-            //     }),
+            BlocConsumer<AuthCubit, AuthState>(builder: (context, state) {
+              return Container();
+            }, listener: (context, state) {
+              if (state is AuthLoading) {
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Loading ...'),
+                  ),
+                );
+              } else if (state is AuthError) {
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('An Error Occured'),
+                  ),
+                );
+              } else if (state is Authenticated) {
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('You are authenticated '),
+                  ),
+                );
+              } else if (state is FirstRun) {
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('You are in the first Run'),
+                  ),
+                );
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      content: Container(
+                        height: 300,
+                        child: Column(
+                          children: [
+                            TextFormField(
+                              controller: _firstNameController,
+                              decoration: InputDecoration(
+                                hintText: 'FirstName',
+                              ),
+                            ),
+                            TextFormField(
+                              controller: _lastNameController,
+                              decoration: InputDecoration(
+                                hintText: 'LastName',
+                              ),
+                            ),
+                            TextFormField(
+                              controller: _birthdayController,
+                              decoration: InputDecoration(
+                                hintText: 'Birthday',
+                              ),
+                            ),
+                            MaterialButton(
+                              onPressed: updatePersonlData,
+                              child: Text(
+                                'Update',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                              color: Colors.black,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(4))),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                );
+              } else if (state is PersonalDataUpdated) {
+                Navigator.pop(context);
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Updated Personal Data'),
+                  ),
+                );
+              } else {
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Please Login'),
+                  ),
+                );
+              }
+            }),
           ],
         )),
       ),

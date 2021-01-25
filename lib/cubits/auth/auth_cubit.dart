@@ -84,4 +84,29 @@ class AuthCubit extends Cubit<AuthState> {
       emit(AuthError(e.toString()));
     }
   }
+
+  Future isFirstRun() async {
+    try {
+      emit(AuthLoading());
+      if (await _authRepository.isFirstRun()) {
+        emit(FirstRun());
+      } else {
+        User currentUser = _authRepository.currentUser();
+        emit(Authenticated(currentUser));
+      }
+    } catch (e) {
+      emit(AuthError(e.toString()));
+    }
+  }
+
+  Future updatePersonalData(
+      String firstName, String lastName, String birthday) async {
+    try {
+      emit(AuthLoading());
+      await _authRepository.updatePersonalData(firstName, lastName, birthday);
+      emit(PersonalDataUpdated());
+    } catch (e) {
+      emit(AuthError(e.toString()));
+    }
+  }
 }

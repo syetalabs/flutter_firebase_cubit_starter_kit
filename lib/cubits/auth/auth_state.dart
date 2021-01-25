@@ -50,3 +50,11 @@ class AuthError extends AuthState {
 class PasswordRequestSubmitted extends AuthState {
   const PasswordRequestSubmitted();
 }
+
+class FirstRun extends AuthState {
+  const FirstRun();
+}
+
+class PersonalDataUpdated extends AuthState {
+  const PersonalDataUpdated();
+}
