@@ -14,7 +14,7 @@ class OnboardKitB extends StatelessWidget {
       noOfBackgroundColor: 2,
 
       /// List of background colors => In descending order
-      bgColor: [Colors.white, Colors.white],
+      bgColor: [Colors.green, Colors.blue],
 
       /// List of  Call-to-action action
       ctaText: ['Skip', 'Get Started'],
@@ -24,17 +24,17 @@ class OnboardKitB extends StatelessWidget {
         {
           "Scr 1 Heading": "Screen 1 Heading Goes Here",
           "Scr 1 Sub Heading": "Screen 1 Sub Heading Goes Here",
-          "Scr 1 Image Path": 'assets/av1.png',
+          "Scr 1 Image Path": 'assets/bird1.png',
         },
         {
           "Scr 2 Heading": "Screen 2 Heading Goes Here",
           "Scr 2 Sub Heading": "Screen 2 Sub Heading Goes Here",
-          "Scr 2 Image Path": 'assets/av2.png',
+          "Scr 2 Image Path": 'assets/bird2.png',
         },
         {
           "Scr 3 Heading": "Screen 3 Heading Goes Here",
           "Scr 3 Sub Heading": "Screen 3 Sub Heading Goes Here",
-          "Scr 3 Image Path": 'assets/av3.png',
+          "Scr 3 Image Path": 'assets/bird1.png',
         },
       ],
 

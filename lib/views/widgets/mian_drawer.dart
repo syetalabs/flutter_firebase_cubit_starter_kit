@@ -32,7 +32,7 @@ class MainDrawer extends StatelessWidget {
                     Text(
                       'StarterKit ',
                       style: TextStyle(
-                        color: Constants.primaryColor,
+                        color: PRIMARY_COLOR,
                         fontFamily: 'Metropolis',
                         fontWeight: FontWeight.w500,
                         fontSize: SizeConfig.blockSizeHorizontal * 7,
@@ -49,7 +49,7 @@ class MainDrawer extends StatelessWidget {
                         Icon(
                           Icons.circle,
                           size: SizeConfig.blockSizeHorizontal * 3,
-                          color: Constants.primaryColor,
+                          color: PRIMARY_COLOR,
                         ),
                         Positioned(
                           bottom: 0,
@@ -57,7 +57,7 @@ class MainDrawer extends StatelessWidget {
                           child: Icon(
                             Icons.copyright,
                             size: SizeConfig.blockSizeHorizontal * 2,
-                            color: Constants.primaryColor,
+                            color: PRIMARY_COLOR,
                           ),
                         )
                       ],
@@ -131,5 +131,3 @@ class MainDrawer extends StatelessWidget {
     );
   }
 }
-
-

@@ -6,6 +6,7 @@ import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/kit_a.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_a.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_b.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_c.dart';
 import '../views/pages/app_config/index.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/forget_password.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/data_curd/index.dart';
@@ -47,6 +48,7 @@ var customRoutes = <String, WidgetBuilder>{
   OnboardingMainScreen.routeName: (context) => OnboardingMainScreen(),
   OnboardKitA.routeName: (context) => OnboardKitA(),
   OnboardKitB.routeName: (context) => OnboardKitB(),
+  OnboardKitC.routeName: (context) => OnboardKitC(),
   FlutterLoginScreen.routeName: (context) => FlutterLoginScreen(),
   AuthEntryScreen.routeName: (context) => AuthEntryScreen(),
   AuthKitA.routeName: (context) => AuthKitA(),

@@ -5,6 +5,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_a.dart';
+import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_c.dart';
 
 import 'cubits/auth/auth_cubit.dart';
 import 'data/repositories/auth_repository.dart';
@@ -39,8 +41,8 @@ class MyApp extends StatelessWidget {
   //   }
   // };
 
-  final Map<int, Widget> op = {1: Dashboard(), 2: OnboardKitB()};
-  
+  final Map<int, Widget> op = {1: Dashboard(), 2: OnboardKitC()};
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -56,7 +58,7 @@ class MyApp extends StatelessWidget {
         // backGroundColor: Color(0xfffc6042),
         animationEffect: 'zoom-in',
         logoSize: 200,
-        home: OnboardKitB(),
+        home: OnboardKitC(),
         // customFunction: () {
         //   print('Inside Fucntion');
         //   duringSplash(context);
