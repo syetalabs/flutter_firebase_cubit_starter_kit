@@ -1,20 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_firebase_cubit_starter_kit/cubits/auth/auth_cubit.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/app_config/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/index.dart';
+import '../../../cubits/auth/auth_cubit.dart';
 
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/data_curd/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/firebase_cloud/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/image_upload/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/log_analy_crash/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/theme/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/version/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/widgets/mian_drawer.dart';
-
-import '../user/index.dart';
-import '../../widgets/feature_button.dart';
+import '../../widgets/mian_drawer.dart';
 
 class Dashboard extends StatefulWidget {
   static const routeName = '/dashboard-main-screen';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_a.dart';
+import 'kit_a.dart';
 import '../../widgets/feature_button.dart';
 import 'kit_b.dart';
 

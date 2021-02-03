@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/util/size_config.dart';
+import '../../util/size_config.dart';
 
 class UserDataListTile extends StatelessWidget {
   final String keyname;

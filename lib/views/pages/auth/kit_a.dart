@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/auth_entry_screen.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/forget_password.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/login.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/register.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/widgets/feature_button.dart';
+import 'auth_entry_screen.dart';
+import 'forget_password.dart';
+import 'login.dart';
+import 'register.dart';
+import '../../widgets/feature_button.dart';
 
 class AuthKitA extends StatelessWidget {
   static const routeName = '/Auth-kit-a-screen';

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_firebase_cubit_starter_kit/cubits/auth/auth_cubit.dart';
-import 'package:flutter_firebase_cubit_starter_kit/util/constants.dart';
-import 'package:flutter_firebase_cubit_starter_kit/util/size_config.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/register.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/widgets/feature_button.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/widgets/icon_text_button.dart';
+import '../../../cubits/auth/auth_cubit.dart';
+import '../../../util/constants.dart';
+import '../../../util/size_config.dart';
+import 'register.dart';
+import '../dashboard/index.dart';
+import '../../widgets/icon_text_button.dart';
 
 import 'login.dart';
 

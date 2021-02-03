@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/widgets/user_data_list_tile.dart';
+import '../../widgets/user_data_list_tile.dart';
 import 'package:package_info/package_info.dart';
 
 class VersionScreen extends StatefulWidget {

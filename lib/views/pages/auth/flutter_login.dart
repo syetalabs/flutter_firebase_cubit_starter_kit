@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/home/index.dart';
+import 'home/index.dart';
 import 'package:flutter_login/flutter_login.dart';
 
 class FlutterLoginScreen extends StatelessWidget {

@@ -1,18 +1,13 @@
 import 'package:custom_splash/custom_splash.dart';
 import 'package:flutter/material.dart';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_a.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/kit_c.dart';
-
+import 'views/pages/dashboard/index.dart';
+import 'views/pages/onboarding/kit_c.dart';
 import 'cubits/auth/auth_cubit.dart';
 import 'data/repositories/auth_repository.dart';
 import 'util/custom_routes.dart';
-import 'views/pages/first_page/index.dart';
-import 'views/pages/onboarding/kit_b.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

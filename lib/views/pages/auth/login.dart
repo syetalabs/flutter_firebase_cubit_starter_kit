@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/forget_password.dart';
+import 'forget_password.dart';
 
 import 'home/index.dart';
 import 'register.dart';

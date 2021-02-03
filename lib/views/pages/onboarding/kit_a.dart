@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/onboarding/index.dart';
+import 'index.dart';
 
 import 'package:page_view_indicators/circle_page_indicator.dart';
 

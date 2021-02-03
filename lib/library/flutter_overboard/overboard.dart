@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/util/constants.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/widgets/cache_image_network.dart';
+import '../../util/constants.dart';
+import '../../views/widgets/cache_image_network.dart';
 
 import 'circular_clipper.dart';
 import 'overboard_animator.dart';

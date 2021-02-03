@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/auth_entry_screen.dart';
+import '../auth/auth_entry_screen.dart';
 import 'package:onboardme/onboardme.dart';
 
 class OnboardKitB extends StatelessWidget {

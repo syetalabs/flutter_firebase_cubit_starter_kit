@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/dashboard/index.dart';
+import '../dashboard/index.dart';
 
 import 'login.dart';
 import '../../../cubits/auth/auth_cubit.dart';

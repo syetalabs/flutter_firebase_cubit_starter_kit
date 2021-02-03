@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_firebase_cubit_starter_kit/library/flutter_overboard/overboard.dart';
-import 'package:flutter_firebase_cubit_starter_kit/library/flutter_overboard/page_model.dart';
-import 'package:flutter_firebase_cubit_starter_kit/views/pages/auth/auth_entry_screen.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import '../../../library/flutter_overboard/overboard.dart';
+import '../../../library/flutter_overboard/page_model.dart';
+import '../auth/auth_entry_screen.dart';
 
 class OnboardKitC extends StatefulWidget {
   static const routeName = '/onboarding-kit-c';
